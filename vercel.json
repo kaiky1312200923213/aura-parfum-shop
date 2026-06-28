@@ -1,0 +1,10 @@
+{
+  "rewrites": [
+    { "source": "/api/perfumes/:id", "destination": "/perfumes/perfumes.js" },
+    { "source": "/api/perfumes", "destination": "/perfumes/perfumes.js" },
+    { "source": "/api/stats", "destination": "/perfumes/stats.js" },
+    { "source": "/api/upload", "destination": "/perfumes/upload.js" },
+    { "source": "/api/site-video", "destination": "/perfumes/site-video.js" },
+    { "source": "/((?!api/).*)", "destination": "/index.html" }
+  ]
+}
