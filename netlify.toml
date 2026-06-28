@@ -1,7 +1,22 @@
 [build]
   command = "npm run build"
   publish = "dist"
-  environment = { VITE_SUPABASE_URL = "https://twfdhgvjzrpnzgjjbyyr.supabase.co", VITE_SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InR3ZmRoZ3ZqenJwbnpnampieXlyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODI2MDIxNjIsImV4cCI6MjA5ODE3ODE2Mn0.kDLaHSFuOWMe3s8V-6BlI3Xk86Hz8AV42QQoWVCAFaE", NEXT_PUBLIC_SUPABASE_URL = "https://twfdhgvjzrpnzgjjbyyr.supabase.co", NEXT_PUBLIC_SUPABASE_ANON_KEY = "sb_publishable_OFrts4wBZqn5mpwe76zIKQ_HA8GQaQT", VITE_GOOGLE_CLIENT_ID = "1065078894672-rmp5kp8vfjns5rn9kp5psfp16g691043.apps.googleusercontent.com", VITE_GOOGLE_AUTH_PROXY = "https://designarena.ai/auth/google/callback" }
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
+
+[build.environment]
+  VITE_SUPABASE_URL = "https://xotjsplwpmhaopvpsfjm.supabase.co"
+  VITE_SUPABASE_ANON_KEY = "sb_publishable_9vnvSONGCMIAt0d3pAnRGA_Q98ZORW6"
+  NEXT_PUBLIC_SUPABASE_URL = "https://xotjsplwpmhaopvpsfjm.supabase.co"
+  NEXT_PUBLIC_SUPABASE_ANON_KEY = "sb_publishable_9vnvSONGCMIAt0d3pAnRGA_Q98ZORW6"
+  VITE_GOOGLE_CLIENT_ID = "1065078894672-rmp5kp8vfjns5rn9kp5psfp16g691043.apps.googleusercontent.com"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
 
 [[redirects]]
   from = "/*"
